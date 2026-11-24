@@ -1,0 +1,508 @@
+{
+  "surum": "VMProtect Ultimate 3.2.0",
+  "edition": "Ultimate",
+  "surumNo": "3.2.0",
+  "tarih": "≈ Mayıs 2018",
+  "binary": {
+    "md5": "4adbc8d7d61af74349ed9aed55ff20ed",
+    "statikPE": ".UPX1 (19 MB) UPX adı kamuflaj",
+    "mimari": "x64"
+  },
+  "analizYontemi": {
+    "arac": "UniversalMVPUIAlgorithm_QT (umvpqt_cli, V307-3 statik-Qt tespit yaması)",
+    "ekranGoruntusu": "KULLANILMADI — ekran görüntüsü yerine süreç-belleği analizi",
+    "not": "Canlı veriler V307 kanıt klasöründeki analizçi çıktılarıdır; bu oturumda Yandex arşivi robot-korumalı olduğundan taze indirme yapılamadı"
+  },
+  "canliTarama": {
+    "qt": {
+      "present": true,
+      "era": 2,
+      "version": "static",
+      "revision": 0
+    },
+    "qobject": 4,
+    "ramMenuOzet": "yok",
+    "ramMenuMetinler": {},
+    "totals": {
+      "qobjects": 4,
+      "widgets": 0,
+      "forms": 0,
+      "classes": 0,
+      "connections": 0
+    }
+  },
+  "ui": {
+    "tabList": [
+      {
+        "no": "1",
+        "name": "Project"
+      },
+      {
+        "no": "2",
+        "name": "Functions"
+      },
+      {
+        "no": "3",
+        "name": "Details"
+      }
+    ],
+    "arayuzNotu": "pre-3.8 arayüzü: menü çubuğu (File/Edit/Project/Tools/Help — 3.5.1 kaynak lsFile/lsEdit/lsProject/lsTools/lsHelp) + sol proje ağacı; aynı içerik farklı düzende",
+    "project": {
+      "list": [
+        {
+          "id": "1.1",
+          "name": "Functions for protection",
+          "not": "FUNCTIONS/FOLDER/FUNCTION ağacı (3.5.1 NodeType); ADD Function buradan",
+          "durum": "VAR",
+          "ram": "RAM taramasında ayrı ayrı yakalanmadı (V307 hedef listesi kısıtlıydı)"
+        },
+        {
+          "id": "1.2",
+          "name": "Licenses",
+          "durum": "VAR",
+          "not": "LICENSES/LICENSE düğümleri; Ultimate: license_dialog + import_license_dialog",
+          "ram": "RAM taramasında ayrı ayrı yakalanmadı (V307 hedef listesi kısıtlıydı)"
+        },
+        {
+          "id": "1.3",
+          "name": "Files",
+          "durum": "VAR",
+          "not": "FILES/FILE/FILE_FOLDER düğümleri + File Manager (cpVirtualFiles)",
+          "ram": "RAM taramasında ayrı ayrı yakalanmadı (V307 hedef listesi kısıtlıydı)"
+        },
+        {
+          "id": "1.4",
+          "name": "Options",
+          "durum": "VAR",
+          "not": "OPTIONS düğümü — 6 alt grup",
+          "ram": "RAM taramasında ayrı ayrı yakalanmadı (V307 hedef listesi kısıtlıydı)"
+        }
+      ],
+      "options": {
+        "subtabs": [
+          {
+            "id": "1.4.1",
+            "name": "Virtual Machine",
+            "durum": "YOK",
+            "not": "Virtual Machine grubu ilk kez 3.8.0'da geldi (V308 en.lng ölçümü: pre-3.8 dil tablosunda Complexity/Instances anahtarı yok)"
+          },
+          {
+            "id": "1.4.2",
+            "name": "File",
+            "durum": "VAR",
+            "controls": [
+              {
+                "id": "1.4.2.1",
+                "name": "Memory Protection",
+                "type": "Yes/No",
+                "bit": "cpMemoryProtection=0x1000",
+                "not": "Image CRC — non-writable bölümler",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.2",
+                "name": "Import Protection",
+                "type": "Yes/No",
+                "bit": "cpImportProtection=0x200",
+                "not": "Import tablosu gizleme",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.3",
+                "name": "Resource Protection",
+                "type": "Yes/No",
+                "bit": "cpResourceProtection=0x10000",
+                "not": "Resource şifreleme",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.4",
+                "name": "Pack the Output File",
+                "type": "Yes/No",
+                "bit": "cpPack=0x100",
+                "not": "Çıktı sıkıştırma",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.5",
+                "name": "Strip Debug Info",
+                "type": "Yes/No",
+                "bit": "cpStripDebugInfo=0x40000",
+                "not": "Debug bilgisi silme",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.6",
+                "name": "Strip Relocations (Fixups)",
+                "type": "Yes/No",
+                "bit": "cpStripFixups=0x8000",
+                "not": "Relocation tablosu silme",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              },
+              {
+                "id": "1.4.2.7",
+                "name": "Virtual Files (Bundler)",
+                "type": "Yes/No",
+                "bit": "cpVirtualFiles",
+                "not": "Sanal dosya sistemi — YALNIZ Ultimate",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 core/core.h ProjectOption biti + V309 derleme testi"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1.4.3",
+            "name": "Detection",
+            "durum": "VAR",
+            "controls": [
+              {
+                "id": "1.4.3.1",
+                "name": "Debugger Found",
+                "type": "Yes/No",
+                "bit": "cpCheckDebugger=0x400",
+                "not": "Kullanıcı-modu dedektör",
+                "kanit": {
+                  "kaynak": "3.5.1 core ProjectOption biti + V309 fn0-debugger/fn0-vmtools koşusu"
+                }
+              },
+              {
+                "id": "1.4.3.2",
+                "name": "Kernel Debugger Found",
+                "type": "Yes/No",
+                "bit": "cpCheckKernelDebugger",
+                "not": "Kernel-modu dedektör",
+                "kanit": {
+                  "kaynak": "3.5.1 core ProjectOption biti + V309 fn0-debugger/fn0-vmtools koşusu"
+                }
+              },
+              {
+                "id": "1.4.3.3",
+                "name": "Virtualization Tools Detection",
+                "type": "Yes/No",
+                "bit": "cpCheckVirtualMachine=0x800",
+                "not": "VM/sandbox tespiti (V309 fn0-vmtools koşuldu)",
+                "kanit": {
+                  "kaynak": "3.5.1 core ProjectOption biti + V309 fn0-debugger/fn0-vmtools koşusu"
+                }
+              },
+              {
+                "id": "1.4.3.4",
+                "name": "Runner CRC",
+                "type": "Yes/No",
+                "bit": "cpRunnerCRC",
+                "not": "Bütünlük kontrolü",
+                "kanit": {
+                  "kaynak": "3.5.1 core ProjectOption biti + V309 fn0-debugger/fn0-vmtools koşusu"
+                }
+              },
+              {
+                "id": "1.4.3.5",
+                "name": "Loader CRC",
+                "type": "Yes/No",
+                "bit": "cpLoaderCRC",
+                "not": "Loader bütünlüğü",
+                "kanit": {
+                  "kaynak": "3.5.1 core ProjectOption biti + V309 fn0-debugger/fn0-vmtools koşusu"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1.4.4",
+            "name": "Additional",
+            "durum": "VAR",
+            "controls": [
+              {
+                "id": "1.4.4.1",
+                "name": "VM Segment Name",
+                "type": "metin",
+                "bit": null,
+                "not": "Varsayılan '.vmp' — eski sürümlerde '.UPX' kamuflajıyla kullanılmış (V306 kanıtı)",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak + V308 ölçümü"
+                }
+              },
+              {
+                "id": "1.4.4.2",
+                "name": "Build Date",
+                "type": "tarih",
+                "bit": null,
+                "not": "yyyy-mm-dd",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak + V308 ölçümü"
+                }
+              },
+              {
+                "id": "1.4.4.3",
+                "name": "Encrypt Registers",
+                "type": "Yes/No",
+                "bit": "cpEncryptRegs",
+                "not": "Register şifreleme",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak + V308 ölçümü"
+                }
+              },
+              {
+                "id": "1.4.4.4",
+                "name": "Encrypt Values / Bytecode",
+                "type": "Yes/No",
+                "bit": "cpCryptValues + cpEncryptBytecode",
+                "not": "Değer + bytecode şifreleme",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak + V308 ölçümü"
+                }
+              },
+              {
+                "id": "1.4.4.5",
+                "name": "Debug Mode (INT3)",
+                "type": "Yes/No",
+                "bit": "cpDebugMode",
+                "not": "Koruma içi hata ayıklama davranışı",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak + V308 ölçümü"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1.4.5",
+            "name": "Messages",
+            "durum": "VAR",
+            "controls": [
+              {
+                "id": "1.4.5.1",
+                "name": "Message 1..5",
+                "type": "metin×5",
+                "not": "5 özelleştirilebilir runtime mesajı (Debugger/VM/CRC tetikleyicileri)",
+                "kanit": {
+                  "kaynak": "3.5.1: <Messages/> proje düğümü (V309 .vmp XML'inde gerçek yer aldı)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1.4.6",
+            "name": "Licensing Parameters",
+            "durum": "VAR",
+            "controls": [
+              {
+                "id": "1.4.6.1",
+                "name": "Licensing Parameters (.vmp dosyası)",
+                "type": "dosya",
+                "not": "Lisans anahtarı/çifti — YALNIZ Ultimate (Pro/Lite'ta bölüm yok)",
+                "kanit": {
+                  "kaynak": "edition matrisi (A2): Licensing yalnız Ultimate"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "functions": {
+      "name": "Functions for protection — fonksiyon listesi",
+      "addFunction": {
+        "buton": "Add Function…",
+        "dialog": "Function dialog (AddFunction / GotoAddress)",
+        "kaynak": "3.5.1 function_dialog.cc; V309'da MovePlayer ile GERÇEKLEŞTİRİLDİ ve derlendi"
+      },
+      "liste": [
+        {
+          "fonksiyon": "MovePlayer (Test_64.exe export 'movepos' — V309'da eklendi)",
+          "ekleme": {
+            "dialog": "Function dialog (AddFunction / GotoAddress)",
+            "kaynak": "3.5.1 GUI: function_dialog.cc",
+            "v309": "ADD Function gerçekleştirildi (V309): Test_64.exe'ye MovePlayer eklendi — .vmp proje dosyası (<Procedure Address=\"0x1400014C0\" CompilationType=\"...\"/>) yazıldı ve VMProtect derlemesi koşuldu",
+            "adres": "0x1400014C0",
+            "varyasyonlar": [
+              {
+                "ad": "fn-virt",
+                "compilationType": "Virtualization",
+                "secenek": "seçenek yok"
+              },
+              {
+                "ad": "fn-mutation",
+                "compilationType": "Mutation",
+                "secenek": "seçenek yok"
+              },
+              {
+                "ad": "fn-ultra",
+                "compilationType": "Ultra",
+                "secenek": "seçenek yok"
+              },
+              {
+                "ad": "fn-virt-all",
+                "compilationType": "Virtualization",
+                "secenek": "8 dosya seçeneği HEPSİ (0x15F00)"
+              },
+              {
+                "ad": "fn6-virt-v301",
+                "compilationType": "Virtualization",
+                "secenek": "6 fonksiyon + Strip Relocations (V301 seti)"
+              }
+            ],
+            "kanitDosya": "download/Test_64.vmp.exe (korumalı çıktı)"
+          },
+          "tabs": [
+            {
+              "id": "1.1.1",
+              "name": "Protection",
+              "controls": [
+                {
+                  "id": "1.1.1.1",
+                  "name": "Compilation Type",
+                  "type": "combobox",
+                  "values": [
+                    "Virtualization",
+                    "Mutation",
+                    "Ultra"
+                  ],
+                  "bit": "ctVirtualization=0 / ctMutation=1 / ctUltra=2 (core/files.h)",
+                  "kanit": {
+                    "kaynak": "3.5.1 core/files.h + V309: üç varyasyon gerçekten DERLENDİ (fn-virt/fn-mutation/fn-ultra)"
+                  }
+                },
+                {
+                  "id": "1.1.1.2",
+                  "name": "Complexity",
+                  "type": "value",
+                  "unit": "%",
+                  "domain": "Default / 0..100",
+                  "durum": "YOK — ilk kez 3.8.0'da geldi",
+                  "kanit": {
+                    "kaynak": "V308 en.lng ölçümü + changelog"
+                  }
+                },
+                {
+                  "id": "1.1.1.3",
+                  "name": "Lock to Serial Number",
+                  "type": "Yes/No",
+                  "durum": "VAR",
+                  "kanit": {
+                    "kaynak": "3.5.1 kaynak: serial'e kilitleme (code lock) + edition matrisi: Licensing yalnız Ultimate"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1.1.2",
+              "name": "Details",
+              "controls": [
+                {
+                  "id": "1.1.2.1",
+                  "name": "Address",
+                  "type": "value",
+                  "value": "0x1400014C0"
+                },
+                {
+                  "id": "1.1.2.2",
+                  "name": "Destination / Folder",
+                  "type": "tree",
+                  "not": "FUNCTIONS/FOLDER/FUNCTION düğümleri (3.5.1 NodeType)"
+                },
+                {
+                  "id": "1.1.2.3",
+                  "name": "External Addresses",
+                  "type": "list",
+                  "not": "Klasör düzeyi: dış adres listesi"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "details": {
+      "name": "Details",
+      "not": "Seçili düğümün özellik görünümü (property editor) — fonksiyon seçiliyken Protection/Details alt sekmeleri",
+      "icin": {
+        "tabs": [
+          {
+            "id": "1.1.1",
+            "name": "Protection",
+            "controls": [
+              {
+                "id": "1.1.1.1",
+                "name": "Compilation Type",
+                "type": "combobox",
+                "values": [
+                  "Virtualization",
+                  "Mutation",
+                  "Ultra"
+                ],
+                "bit": "ctVirtualization=0 / ctMutation=1 / ctUltra=2 (core/files.h)",
+                "kanit": {
+                  "kaynak": "3.5.1 core/files.h + V309: üç varyasyon gerçekten DERLENDİ (fn-virt/fn-mutation/fn-ultra)"
+                }
+              },
+              {
+                "id": "1.1.1.2",
+                "name": "Complexity",
+                "type": "value",
+                "unit": "%",
+                "domain": "Default / 0..100",
+                "durum": "YOK — ilk kez 3.8.0'da geldi",
+                "kanit": {
+                  "kaynak": "V308 en.lng ölçümü + changelog"
+                }
+              },
+              {
+                "id": "1.1.1.3",
+                "name": "Lock to Serial Number",
+                "type": "Yes/No",
+                "durum": "VAR",
+                "kanit": {
+                  "kaynak": "3.5.1 kaynak: serial'e kilitleme (code lock) + edition matrisi: Licensing yalnız Ultimate"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1.1.2",
+            "name": "Details",
+            "controls": [
+              {
+                "id": "1.1.2.1",
+                "name": "Address",
+                "type": "value",
+                "value": "0x1400014C0"
+              },
+              {
+                "id": "1.1.2.2",
+                "name": "Destination / Folder",
+                "type": "tree",
+                "not": "FUNCTIONS/FOLDER/FUNCTION düğümleri (3.5.1 NodeType)"
+              },
+              {
+                "id": "1.1.2.3",
+                "name": "External Addresses",
+                "type": "list",
+                "not": "Klasör düzeyi: dış adres listesi"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
