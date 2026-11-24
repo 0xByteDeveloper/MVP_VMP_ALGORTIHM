@@ -1,0 +1,12 @@
+--- a/universalObfusPublicSrc/core/pe.h
++++ b/universalObfusPublicSrc/core/pe.h
+@@ -771,9 +771,6 @@
+ 	DWORD   TimeStamp;
+ } IMAGE_DELAY_IMPORT_DESCRIPTOR;
+ 
+-#ifndef COMIMAGE_FLAGS_NATIVE_ENTRYPOINT
+-#define COMIMAGE_FLAGS_NATIVE_ENTRYPOINT 0x00000010
+-#endif
+ #ifndef VMP_WINNT_HAS_CODE_INTEGRITY
+ typedef struct _IMAGE_LOAD_CONFIG_CODE_INTEGRITY {
+ 	WORD    Flags;          // Flags to indicate if CI information is available, etc.

@@ -1,0 +1,1248 @@
+{
+ "baslik": "VMProtect 3.5.1 ↔ 3.9.4 özellik farkı ve yükseltme yaması",
+ "tarih": "2026-11-24",
+ "kaynak_kod": "universalObfusPublicSrc (3.5.1)",
+ "hedef_surum": "VMProtect Ultimate 3.9.4",
+ "girdi": {
+  "dosya": "Test_64.exe",
+  "boyut": 12800
+ },
+ "ozellik_farklari": [
+  {
+   "ad": "Rastgele bölüm adları (maske)",
+   "ui": "Bölüm tablosu / Project → Options",
+   "durum_351": "YOK — ad = şablon adı + sıra numarası, her derlemede aynı",
+   "durum_394": "VAR — her koruyucu bölüm ayrı rastgele ad taşır",
+   "kanit_351": "core/core.cc:3564-3578 (ProjectTemplate::Init: '.' + 3 alfanümerik, bir kez üretilir) ve 13 adlandırma noktası string_format(\"%s%d\", section_name, vmp_index++) [pefile.cc 5, dotnetfile.cc 2, elffile.cc 2, macfile.cc 4]",
+   "kanit_394": "3.9.4 ikili bölüm tablosu: .qWo, .!*_ , .xz@ (V306 kaydı)",
+   "olcum": "3.5.1 motor: .vmp00, .vmp01, .vmp02 — yamalı motor '.???' maskesi: .%b2, .8LR, .29u",
+   "yama": "NextSectionName(): '?' karakterleri rastgele yazdırılabilir simge olur (PE 8, Mach-O 16, ELF sınırsız); varsayılan şablon adı .???",
+   "iddia": "doğru"
+  },
+  {
+   "ad": "Sanal makine complexity (proje)",
+   "ui": "Project → Options → Virtual Machine → Complexity",
+   "durum_351": "YOK — projede yalnız Options ve VMOptions sayısal öznitelikleri var",
+   "durum_394": "VAR — None / 1..100 %",
+   "kanit_351": "core/core.cc:691-711 (<Protection> okuma: InputFileName, Options, VMOptions, VMCodeSectionName…); core/files.h:1169 CompileOptions",
+   "kanit_394": "Resmî changelog 3.8 (aşağıdaki changelog kayıtları)",
+   "olcum": "MovePlayer sanallaştırma — 3.5.1: 589.312 bayt; yamalı complexity %0: 585.216 bayt; %25: 864.256 bayt; %50: 1.150.464 bayt; %75: 1.396.224 bayt; %100: 1.623.552 bayt",
+   "yama": "XML VMComplexity=\"0..100\" → CompileOptions::vm_complexity → Mutate çöp komut üst sınırı ve sanallaştırma öncesi mutasyon",
+   "iddia": "doğru (boyut ölçümüyle doğrulandı)"
+  },
+  {
+   "ad": "Fonksiyona özel complexity",
+   "ui": "Functions for protection → fonksiyon → Protection → Complexity",
+   "durum_351": "YOK — fonksiyon seçenekleri yalnız bir bit maskesi (coLockToKey)",
+   "durum_394": "VAR — Default / 0..100 %",
+   "kanit_351": "core/processors.h:632-634 enum CompilationOption { coLockToKey = 0x2000 }; core/core.cc:749-841 <Procedure> okuma",
+   "kanit_394": "Resmî changelog 3.8 (aşağıdaki changelog kayıtları)",
+   "olcum": "Yamalı: fonksiyon %50 → 611.840 bayt, %100 → 612.352 bayt (proje %0 iken). NOT: proje düzeyi %100 = 1.623.552 bayt; fonksiyon düzeyi etkinin daha küçük kalmasının nedeni bu oturumda incelenmedi.",
+   "yama": "XML <Procedure Complexity=\"0..100\"> → adres→% tablosu → fonksiyon değeri yoksa proje değeri kullanılır",
+   "iddia": "kısmen doğrulandı (çalışıyor, etki büyüklüğü incelenmedi)"
+  },
+  {
+   "ad": "Sanal makine örnek sayısı (Instances)",
+   "ui": "Project → Options → Virtual Machine → Instances",
+   "durum_351": "Kullanıcıya kapalı — motor içinde sabit 1 veya 10",
+   "durum_394": "VAR — Default / 1..10",
+   "kanit_351": "core/core.cc:1749-1757 (options.vm_count … ? 1 : 10); core/intel.cc:30781 VM oluşturma döngüsü",
+   "kanit_394": "Resmî changelog 3.8",
+   "olcum": "Yamalı: 1 örnek → 75.264 bayt; 10 örnek → 589.312 bayt",
+   "yama": "XML VMInstances=\"1..10\" → CompileOptions::vm_count",
+   "iddia": "doğru"
+  },
+  {
+   "ad": "Sanal makine sürümü (Version)",
+   "ui": "Project → Options → Virtual Machine → Version",
+   "durum_351": "Kullanıcıya kapalı — yalnız VMOptions biti (klasik/gelişmiş VM)",
+   "durum_394": "VAR — Default / VMProtect 2.X",
+   "kanit_351": "core/intel.cc:30645-30651 ((vm_flags & 1) ? vtClassic : vtAdvanced)",
+   "kanit_394": "Resmî changelog 3.8",
+   "olcum": "Yamalı: Default → 589.312 bayt; VMProtect 2.X → 156.160 bayt",
+   "yama": "XML VMVersion=\"0|1\" → vm_flags bit 0",
+   "iddia": "doğru"
+  },
+  {
+   "ad": "Derleme rastgele tohumu",
+   "ui": "(yamaya eklenen yardımcı seçenek)",
+   "durum_351": "Tohum sabit 0 → aynı proje her derlemede bayt bayt aynı çıktı",
+   "durum_394": "Bu oturumda resmî 3.9.4 davranışı ölçülemedi (ikili yok)",
+   "kanit_351": "core/core.cc:1707 (rand_seed = 0; srand(rand_seed))",
+   "kanit_394": "—",
+   "olcum": "Yamalı: tohumsuz iki derleme aynı mı? hayır; RandomSeed=12345 ile iki derleme aynı mı? evet",
+   "yama": "XML RandomSeed (yoksa her derlemede yeni tohum; verilirse tekrarlanabilir derleme)",
+   "iddia": "kullanıcı iddiası dışında"
+  },
+  {
+   "ad": "Sanal koda karşı anti-statik-decompiler koruması",
+   "ui": "3.7",
+   "durum_351": "yok",
+   "durum_394": "changelog'da kayıtlı",
+   "kanit_351": "3.5.1 kaynağında karşılığı bulunamadı",
+   "kanit_394": "Resmî changelog: 3.7",
+   "olcum": "—",
+   "yama": "UYGULANMADI (bu oturumun kapsamı dışı)",
+   "iddia": "changelog ile doğrulandı",
+   "changelog": [
+    {
+     "surum": "3.7",
+     "tur": "YENİ",
+     "metin": ".NET: Added protection against static decompilers for virtualized code"
+    },
+    {
+     "surum": "3.7",
+     "tur": "YENİ",
+     "metin": "Intel: Added protection against static decompilers for virtualized code"
+    }
+   ]
+  },
+  {
+   "ad": "Sanal makine obfuscation iyileştirmeleri",
+   "ui": "3.7.3 / 3.8.2",
+   "durum_351": "yok",
+   "durum_394": "changelog'da kayıtlı",
+   "kanit_351": "3.5.1 kaynağında karşılığı bulunamadı",
+   "kanit_394": "Resmî changelog: 3.7.3 / 3.8.2",
+   "olcum": "—",
+   "yama": "UYGULANMADI (bu oturumun kapsamı dışı)",
+   "iddia": "changelog ile doğrulandı",
+   "changelog": [
+    {
+     "surum": "3.7.3",
+     "tur": "İYİLEŞTİRME",
+     "metin": "Intel: Improved virtual machine obfuscation"
+    },
+    {
+     "surum": "3.8.2",
+     "tur": "İYİLEŞTİRME",
+     "metin": "Intel: Improved virtual machine obfuscation"
+    },
+    {
+     "surum": "3.9.3",
+     "tur": "YENİ",
+     "metin": "PE: Added obfuscation of RTTI names for binaries compiled with MSVC when using the \"Strip Debug Information\" option"
+    }
+   ]
+  },
+  {
+   "ad": "Shadow Stack uyumluluğu",
+   "ui": "3.8.3",
+   "durum_351": "yok",
+   "durum_394": "changelog'da kayıtlı",
+   "kanit_351": "3.5.1 kaynağında karşılığı bulunamadı",
+   "kanit_394": "Resmî changelog: 3.8.3",
+   "olcum": "—",
+   "yama": "UYGULANMADI (bu oturumun kapsamı dışı)",
+   "iddia": "changelog ile doğrulandı",
+   "changelog": [
+    {
+     "surum": "3.8.3",
+     "tur": "YENİ",
+     "metin": "PE: Added the project option “Shadow Stack Compatible”"
+    }
+   ]
+  },
+  {
+   "ad": "RTTI ad obfuscation vb.",
+   "ui": "3.9.3",
+   "durum_351": "yok",
+   "durum_394": "changelog'da kayıtlı",
+   "kanit_351": "3.5.1 kaynağında karşılığı bulunamadı",
+   "kanit_394": "Resmî changelog: 3.9.3",
+   "olcum": "—",
+   "yama": "UYGULANMADI (bu oturumun kapsamı dışı)",
+   "iddia": "changelog ile doğrulandı",
+   "changelog": [
+    {
+     "surum": "3.9.3",
+     "tur": "YENİ",
+     "metin": "PE: Added obfuscation of RTTI names for binaries compiled with MSVC when using the \"Strip Debug Information\" option"
+    }
+   ]
+  },
+  {
+   "ad": "Bayt kodu şifreleme (cpEncryptBytecode)",
+   "ui": "Lisans bağlantılı",
+   "durum_351": "Kaynakta var, lisans kapılı",
+   "durum_394": "bu oturumda ölçülemedi",
+   "kanit_351": "core/core.cc:1739-1744 (VMProtectGetSerialNumberState() == SERIAL_STATE_SUCCESS)",
+   "kanit_394": "—",
+   "olcum": "—",
+   "yama": "DOKUNULMADI — lisans mekanizması değiştirilmedi",
+   "iddia": "—"
+  }
+ ],
+ "changelog_351_394": {
+  "surum_sayisi": 21,
+  "kaynak": "vmpsoft.com changelog (work/vmp_history.json)",
+  "ilgili_kayitlar": [
+   {
+    "surum": "3.6",
+    "tarih": "March 24, 2022",
+    "tur": "YENİ",
+    "metin": "Added the ability to create segments with random symbols using mask ‘?’",
+    "etiket": [
+     "random"
+    ]
+   },
+   {
+    "surum": "3.7",
+    "tarih": "August 27, 2022",
+    "tur": "YENİ",
+    "metin": ".NET: Added protection against static decompilers for virtualized code",
+    "etiket": [
+     "anti-decompiler"
+    ]
+   },
+   {
+    "surum": "3.7",
+    "tarih": "August 27, 2022",
+    "tur": "YENİ",
+    "metin": "Intel: Added protection against static decompilers for virtualized code",
+    "etiket": [
+     "anti-decompiler"
+    ]
+   },
+   {
+    "surum": "3.7.3",
+    "tarih": "January 11, 2023",
+    "tur": "İYİLEŞTİRME",
+    "metin": "Intel: Improved virtual machine obfuscation",
+    "etiket": [
+     "obfuscation"
+    ]
+   },
+   {
+    "surum": "3.8",
+    "tarih": "February 17, 2023",
+    "tur": "YENİ",
+    "metin": "Intel: Added the project option “Virtual Machine – Instances” with the following values: Default, 1..10",
+    "etiket": [
+     "instances"
+    ]
+   },
+   {
+    "surum": "3.8",
+    "tarih": "February 17, 2023",
+    "tur": "YENİ",
+    "metin": "Intel: Added the project option “Virtual Machine – Complexity” with the following values: None, 1..100%",
+    "etiket": [
+     "complexity"
+    ]
+   },
+   {
+    "surum": "3.8",
+    "tarih": "February 17, 2023",
+    "tur": "YENİ",
+    "metin": "Intel: Added the function option “Protection – Complexity” with the following values: Default, 0..100%",
+    "etiket": [
+     "complexity"
+    ]
+   },
+   {
+    "surum": "3.8",
+    "tarih": "February 17, 2023",
+    "tur": "İYİLEŞTİRME",
+    "metin": ".NET: Fixed the error “System.TypeLoadException: Could not load type ‘System.Random’ from assembly ‘System.Runtime’” that occurred while starting a protected application",
+    "etiket": [
+     "random"
+    ]
+   },
+   {
+    "surum": "3.8.2",
+    "tarih": "May 12, 2023",
+    "tur": "İYİLEŞTİRME",
+    "metin": "Intel: Improved virtual machine obfuscation",
+    "etiket": [
+     "obfuscation"
+    ]
+   },
+   {
+    "surum": "3.8.3",
+    "tarih": "June 19, 2023",
+    "tur": "YENİ",
+    "metin": "PE: Added the project option “Shadow Stack Compatible”",
+    "etiket": [
+     "shadow stack"
+    ]
+   },
+   {
+    "surum": "3.8.6",
+    "tarih": "December 20, 2023",
+    "tur": "YENİ",
+    "metin": ".NET: Added the project option \"Virtual Machine - Complexity\"",
+    "etiket": [
+     "complexity"
+    ]
+   },
+   {
+    "surum": "3.9.3",
+    "tarih": "January 15, 2025",
+    "tur": "YENİ",
+    "metin": "PE: Added obfuscation of RTTI names for binaries compiled with MSVC when using the \"Strip Debug Information\" option",
+    "etiket": [
+     "RTTI",
+     "obfuscation"
+    ]
+   }
+  ]
+ },
+ "upx": {
+  "upx_bolumu_394": false,
+  "kanit": "V306 analizci kaydı (VMProtect_Ultimate_3.9.4__VMProtect_peqt.json): UPX'e ait bölüm adı yok",
+  "upx_kelimesi_v306_kayitinda": false,
+  "bolumler_394": [
+   ".text",
+   ".rdata",
+   ".data",
+   ".pdata",
+   ".tls",
+   ".qtmetad",
+   ".gfids",
+   "_RDATA",
+   ".qWo",
+   ".!*_",
+   ".xz@",
+   ".rsrc",
+   ".reloc"
+  ],
+  "koruyucu_bolumler_394": {
+   ".qWo": "sanal boyut 17.763.483, ham veri 0",
+   ".!*_": "264 / 512 bayt, entropy 0,91",
+   ".xz@": "37.916.172 / 37.916.672 bayt, entropy 7,97"
+  },
+  "resmi_396_ciktisi_upx": false,
+  "resmi_396_ciktisi_bolumleri": [
+   ".text",
+   ".rdata",
+   ".data",
+   ".pdata",
+   ".dne"
+  ],
+  "sonuc": "3.9.4 UPX ile paketli DEĞİL (kendisi bir paketleyici: çıktısı UPX ile sıkıştırılmış bölüm tablosu taşımaz) → UPX kaldırma adımı uygulanmadı."
+ },
+ "olcum": [
+  {
+   "varyasyon": "fn0-none",
+   "taban_boyut": 13312,
+   "yamali_boyut": 13312,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "337d09c3ff1f",
+   "yamali_sha12": "1f13126e7418",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": 0.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 1.796
+   }
+  },
+  {
+   "varyasyon": "fn1-virt",
+   "taban_boyut": 589312,
+   "yamali_boyut": 589312,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "378eea12bfdb",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.54
+   }
+  },
+  {
+   "varyasyon": "fn1-mutation",
+   "taban_boyut": 13824,
+   "yamali_boyut": 13824,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "54bcc69e3386",
+   "yamali_sha12": "b2df001310f8",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": 0.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 3.633
+   }
+  },
+  {
+   "varyasyon": "fn1-ultra",
+   "taban_boyut": 595968,
+   "yamali_boyut": 593920,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "6dbfe3c3754a",
+   "yamali_sha12": "7c2c755ec5ef",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.553
+   }
+  },
+  {
+   "varyasyon": "fn6-virt",
+   "taban_boyut": 696320,
+   "yamali_boyut": 701952,
+   "yamali_taban_orani": 1.01,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "4bbe29d96d92",
+   "yamali_sha12": "4812923ce1ec",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.642
+   }
+  },
+  {
+   "varyasyon": "fn6-mutation",
+   "taban_boyut": 16384,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "3e12e88a99f4",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn6-ultra",
+   "taban_boyut": 738304,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "9009dba6c74e",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-virt-c0",
+   "taban_boyut": 589312,
+   "yamali_boyut": 585216,
+   "yamali_taban_orani": 0.99,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "eca07e708185",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.531
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-c25",
+   "taban_boyut": 589312,
+   "yamali_boyut": 864256,
+   "yamali_taban_orani": 1.47,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "f8298ce79091",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.674
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-c50",
+   "taban_boyut": 589312,
+   "yamali_boyut": 1150464,
+   "yamali_taban_orani": 1.95,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "466a5387e82c",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.3,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.724
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-c75",
+   "taban_boyut": 589312,
+   "yamali_boyut": 1396224,
+   "yamali_taban_orani": 2.37,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "f738d16a116d",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.4,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.742
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-c100",
+   "taban_boyut": 589312,
+   "yamali_boyut": 1623552,
+   "yamali_taban_orani": 2.75,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "943be3bfd18f",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.6,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.741
+   }
+  },
+  {
+   "varyasyon": "fn1-mutation-c0",
+   "taban_boyut": 13824,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "54bcc69e3386",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-ultra-c0",
+   "taban_boyut": 595968,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "6dbfe3c3754a",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-virt-fc0",
+   "taban_boyut": 589312,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-mutation-c50",
+   "taban_boyut": 13824,
+   "yamali_boyut": 13824,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "54bcc69e3386",
+   "yamali_sha12": "0dc4c31325e2",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": 0.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 5.605
+   }
+  },
+  {
+   "varyasyon": "fn1-ultra-c50",
+   "taban_boyut": 595968,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "6dbfe3c3754a",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-virt-fc50",
+   "taban_boyut": 589312,
+   "yamali_boyut": 611840,
+   "yamali_taban_orani": 1.04,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "46f73d678a64",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.546
+   }
+  },
+  {
+   "varyasyon": "fn1-mutation-c100",
+   "taban_boyut": 13824,
+   "yamali_boyut": 14336,
+   "yamali_taban_orani": 1.04,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "54bcc69e3386",
+   "yamali_sha12": "056ddc387763",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 0.1,
+   "yamali_sure_sn": 0.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 4.937
+   }
+  },
+  {
+   "varyasyon": "fn1-ultra-c100",
+   "taban_boyut": 595968,
+   "yamali_boyut": 1636352,
+   "yamali_taban_orani": 2.75,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "6dbfe3c3754a",
+   "yamali_sha12": "1bcd2400069a",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.7,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.749
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-fc100",
+   "taban_boyut": 589312,
+   "yamali_boyut": 612352,
+   "yamali_taban_orani": 1.04,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "ece8a5809cf9",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.581
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-i1",
+   "taban_boyut": 589312,
+   "yamali_boyut": 75264,
+   "yamali_taban_orani": 0.13,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "b6acc643ed10",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 0.2,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.428
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-i2",
+   "taban_boyut": 589312,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-virt-i5",
+   "taban_boyut": 589312,
+   "yamali_boyut": null,
+   "yamali_taban_orani": null,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": null,
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": null,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": null,
+   "yamali_bolum_entropy": {}
+  },
+  {
+   "varyasyon": "fn1-virt-i10",
+   "taban_boyut": 589312,
+   "yamali_boyut": 589312,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "fdc7620ff331",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.54
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-vm2x",
+   "taban_boyut": 589312,
+   "yamali_boyut": 156160,
+   "yamali_taban_orani": 0.26,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "327213ea383b",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 0.3,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.224
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-vm2x-c100",
+   "taban_boyut": 589312,
+   "yamali_boyut": 286208,
+   "yamali_taban_orani": 0.49,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "0720e1b2c684",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.2,
+   "yamali_sure_sn": 0.4,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.701
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-mask-nokta3soru",
+   "taban_boyut": 589312,
+   "yamali_boyut": 584704,
+   "yamali_taban_orani": 0.99,
+   "taban_koruyucu_bolumler": [
+    ".???0"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".$H*"
+   ],
+   "taban_sha12": "a1716c409271",
+   "yamali_sha12": "6dd96fd52d5f",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".$H*": 6.556
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-mask-vmpsoru",
+   "taban_boyut": 589312,
+   "yamali_boyut": 584704,
+   "yamali_taban_orani": 0.99,
+   "taban_koruyucu_bolumler": [
+    "vmp?0"
+   ],
+   "yamali_koruyucu_bolumler": [
+    "vmpr"
+   ],
+   "taban_sha12": "d985632bf27b",
+   "yamali_sha12": "9d4e426140ed",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    "vmpr": 6.551
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-seed12345",
+   "taban_boyut": 589312,
+   "yamali_boyut": 589312,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "5d8441eac70f",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.523
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-seed12345-tekrar",
+   "taban_boyut": 589312,
+   "yamali_boyut": 589312,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "5d8441eac70f",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.523
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-seed777",
+   "taban_boyut": 589312,
+   "yamali_boyut": 585216,
+   "yamali_taban_orani": 0.99,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "5ff1e52694d5",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.0,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.546
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-tekrar",
+   "taban_boyut": 589312,
+   "yamali_boyut": 586240,
+   "yamali_taban_orani": 0.99,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "65451a90a4b5",
+   "yamali_sha12": "eedc5050d85c",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.0,
+   "yamali_sure_sn": 1.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.549
+   }
+  },
+  {
+   "varyasyon": "fn6-virt-c100",
+   "taban_boyut": 696320,
+   "yamali_boyut": 1948160,
+   "yamali_taban_orani": 2.8,
+   "taban_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00"
+   ],
+   "taban_sha12": "4bbe29d96d92",
+   "yamali_sha12": "0a5dc2f62ac0",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.7,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.846
+   }
+  },
+  {
+   "varyasyon": "fn6-ultra-fc100",
+   "taban_boyut": 738304,
+   "yamali_boyut": 873472,
+   "yamali_taban_orani": 1.18,
+   "taban_koruyucu_bolumler": [
+    ".???0"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".TvC"
+   ],
+   "taban_sha12": "8ceec34fac40",
+   "yamali_sha12": "0984fd76ea9e",
+   "taban_wine_eslesti": true,
+   "yamali_wine_eslesti": true,
+   "taban_sure_sn": 1.1,
+   "yamali_sure_sn": 1.2,
+   "yamali_bolum_entropy": {
+    ".TvC": 6.703
+   }
+  },
+  {
+   "varyasyon": "fn1-virt-tespit",
+   "taban_boyut": 5260288,
+   "yamali_boyut": 5267456,
+   "yamali_taban_orani": 1.0,
+   "taban_koruyucu_bolumler": [
+    ".vmp00",
+    ".vmp01",
+    ".vmp02"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".vmp00",
+    ".vmp01",
+    ".vmp02"
+   ],
+   "taban_sha12": "d1ff5d43ac64",
+   "yamali_sha12": "3749346ff737",
+   "taban_wine_eslesti": false,
+   "yamali_wine_eslesti": false,
+   "taban_sure_sn": 2.1,
+   "yamali_sure_sn": 2.1,
+   "yamali_bolum_entropy": {
+    ".vmp00": 6.974,
+    ".vmp01": 0.317,
+    ".vmp02": 6.927
+   }
+  },
+  {
+   "varyasyon": "hepsi-max",
+   "taban_boyut": 5620736,
+   "yamali_boyut": 18545152,
+   "yamali_taban_orani": 3.3,
+   "taban_koruyucu_bolumler": [
+    ".???0",
+    ".???1",
+    ".???2"
+   ],
+   "yamali_koruyucu_bolumler": [
+    ".%b2",
+    ".8LR",
+    ".29u"
+   ],
+   "taban_sha12": "5e638fb4db49",
+   "yamali_sha12": "e21ffe3a7850",
+   "taban_wine_eslesti": false,
+   "yamali_wine_eslesti": false,
+   "taban_sure_sn": 2.3,
+   "yamali_sure_sn": 5.4,
+   "yamali_bolum_entropy": {
+    ".%b2": 7.072,
+    ".8LR": 0.324,
+    ".29u": 7.047
+   }
+  }
+ ],
+ "wine_dogrulama": {
+  "taban": {
+   "eslesti": 35,
+   "eslesmedi": 2,
+   "kosulmadi": 0,
+   "eslesmeyenler": [
+    "fn1-virt-tespit",
+    "hepsi-max"
+   ]
+  },
+  "yamali": {
+   "eslesti": 27,
+   "eslesmedi": 2,
+   "kosulmadi": 0,
+   "eslesmeyenler": [
+    "fn1-virt-tespit",
+    "hepsi-max"
+   ]
+  }
+ },
+ "boyut_iddiasi": {
+  "kullanici": "100 KB exe → 24 MB",
+  "durum": "resmî 3.9.4 ikilisi elde edilemediği için DOĞRULANAMADI",
+  "olculenler": {
+   "taban_3.5.1_virt_1fonk": 589312,
+   "yamali_virt_c100": 1623552,
+   "yamali_hepsi_max": 18545152,
+   "resmi_396_v301_6fonk": 2744832
+  }
+ },
+ "yama": {
+  "diff": "10_yukseltme_3.9.4.diff",
+  "dosyalar": [
+   "core/core.cc",
+   "core/core.h",
+   "core/dotnetfile.cc",
+   "core/elffile.cc",
+   "core/files.cc",
+   "core/files.h",
+   "core/intel.cc",
+   "core/macfile.cc",
+   "core/pefile.cc"
+  ],
+  "yama_noktasi": 21,
+  "kayitlar": [
+   {
+    "dosya": "core/files.h",
+    "etiket": "files.h: CompileOptions alanlari",
+    "adet": 1
+   },
+   {
+    "dosya": "core/files.h",
+    "etiket": "files.h: CompileOptions kurucusu",
+    "adet": 1
+   },
+   {
+    "dosya": "core/files.h",
+    "etiket": "files.h: NextSectionName bildirimi",
+    "adet": 1
+   },
+   {
+    "dosya": "core/files.cc",
+    "etiket": "files.cc: NextSectionName uygulaması",
+    "adet": 1
+   },
+   {
+    "dosya": "core/pefile.cc",
+    "etiket": "pefile.cc: bolum adi uretme (5 nokta)",
+    "adet": 5
+   },
+   {
+    "dosya": "core/dotnetfile.cc",
+    "etiket": "dotnetfile.cc: bolum adi uretme (2 nokta)",
+    "adet": 2
+   },
+   {
+    "dosya": "core/elffile.cc",
+    "etiket": "elffile.cc: bolum adi uretme (2 nokta)",
+    "adet": 2
+   },
+   {
+    "dosya": "core/macfile.cc",
+    "etiket": "macfile.cc: bolum adi uretme (4 nokta)",
+    "adet": 4
+   },
+   {
+    "dosya": "core/core.h",
+    "etiket": "core.h: Core erişimcileri",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.h",
+    "etiket": "core.h: Core üyeleri",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.h",
+    "etiket": "core.h: <map> include",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: Open varsayılanları",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: XML okuma (VMVersion/VMInstances/VMComplexity/RandomSeed)",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: XML okuma (Procedure Complexity)",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: XML yazma (Procedure Complexity)",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: Compile seçenek aktarımı",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: Compile rastgele tohum",
+    "adet": 1
+   },
+   {
+    "dosya": "core/core.cc",
+    "etiket": "core.cc: varsayılan şablon bölüm adı maskesi",
+    "adet": 1
+   },
+   {
+    "dosya": "core/intel.cc",
+    "etiket": "intel.cc: VMP_Complexity yardımcısı",
+    "adet": 1
+   },
+   {
+    "dosya": "core/intel.cc",
+    "etiket": "intel.cc: Mutate çöp komut sınırı",
+    "adet": 1
+   },
+   {
+    "dosya": "core/intel.cc",
+    "etiket": "intel.cc: Sanallaştırma + complexity",
+    "adet": 1
+   }
+  ],
+  "yapilmayanlar": [
+   "Lua binder'ları (vmVersion/vmInstances/vmComplexity/randomSeed, complexity)",
+   "Qt GUI özellik satırları (derlenmedi)",
+   "konsol anahtarları (-vm/-vi/-vc/-rs)",
+   "ValueCryptor zincir uzunluğunun complexity'e bağlanması",
+   "AddUnknown (map adı) dalında Complexity"
+  ]
+ },
+ "sinirlar": [
+  "Yandex Disk captcha'sı aşılmadı → resmî 3.9.4 ikilisi yok",
+  "rea'da decompiler provider'ı yok; compare-artifacts yalnız inspect-artifact kanıtı kabul ediyor",
+  "MemoryProtection + ImportProtection seçenekli çıktılar wine 10 altında beklenen çıktıyı vermedi (3.5.1 ve yamalı motorda aynı)"
+ ]
+}

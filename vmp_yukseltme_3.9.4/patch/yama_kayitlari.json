@@ -1,0 +1,107 @@
+[
+ {
+  "dosya": "core/files.h",
+  "etiket": "files.h: CompileOptions alanlari",
+  "adet": 1
+ },
+ {
+  "dosya": "core/files.h",
+  "etiket": "files.h: CompileOptions kurucusu",
+  "adet": 1
+ },
+ {
+  "dosya": "core/files.h",
+  "etiket": "files.h: NextSectionName bildirimi",
+  "adet": 1
+ },
+ {
+  "dosya": "core/files.cc",
+  "etiket": "files.cc: NextSectionName uygulaması",
+  "adet": 1
+ },
+ {
+  "dosya": "core/pefile.cc",
+  "etiket": "pefile.cc: bolum adi uretme (5 nokta)",
+  "adet": 5
+ },
+ {
+  "dosya": "core/dotnetfile.cc",
+  "etiket": "dotnetfile.cc: bolum adi uretme (2 nokta)",
+  "adet": 2
+ },
+ {
+  "dosya": "core/elffile.cc",
+  "etiket": "elffile.cc: bolum adi uretme (2 nokta)",
+  "adet": 2
+ },
+ {
+  "dosya": "core/macfile.cc",
+  "etiket": "macfile.cc: bolum adi uretme (4 nokta)",
+  "adet": 4
+ },
+ {
+  "dosya": "core/core.h",
+  "etiket": "core.h: Core erişimcileri",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.h",
+  "etiket": "core.h: Core üyeleri",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.h",
+  "etiket": "core.h: <map> include",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: Open varsayılanları",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: XML okuma (VMVersion/VMInstances/VMComplexity/RandomSeed)",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: XML okuma (Procedure Complexity)",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: XML yazma (Procedure Complexity)",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: Compile seçenek aktarımı",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: Compile rastgele tohum",
+  "adet": 1
+ },
+ {
+  "dosya": "core/core.cc",
+  "etiket": "core.cc: varsayılan şablon bölüm adı maskesi",
+  "adet": 1
+ },
+ {
+  "dosya": "core/intel.cc",
+  "etiket": "intel.cc: VMP_Complexity yardımcısı",
+  "adet": 1
+ },
+ {
+  "dosya": "core/intel.cc",
+  "etiket": "intel.cc: Mutate çöp komut sınırı",
+  "adet": 1
+ },
+ {
+  "dosya": "core/intel.cc",
+  "etiket": "intel.cc: Sanallaştırma + complexity",
+  "adet": 1
+ }
+]

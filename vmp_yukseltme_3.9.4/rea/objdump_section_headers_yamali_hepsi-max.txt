@@ -1,0 +1,54 @@
+evidence_id: ev_697e048b77cd20165c72bfaac1df9857f5caa5a78131633c3efbaf319022fcaa
+evidence_format: 2
+subject:
+  identity:
+    kind: file
+    sha256: e21ffe3a78500cb6bb8bfffa334dcebae8ae4ae8d513ce15ea605baac8e5264f
+    selection: null
+    format: unknown
+    architecture: null
+  name: cikti.exe
+  local_path: /home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe
+provider:
+  id: objdump.command
+  name: objdump command
+  version: null
+analysis_profile: null
+predicate_type: rea.reverse-engineering.command-observation
+operation: inspect_with_objdump
+parameters:
+  path: work/v312/test/yamali/hepsi-max/cikti.exe
+  operation: section_headers
+  follow_debug_links: false
+  provider_executable: objdump
+  command_arguments[2]: "-h",/home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe
+raw_result:
+  stdout: "\n/home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe:     file format pei-x86-64\n\nSections:\nIdx Name          Size      VMA               LMA               File off  Algn\n  0 .text         00001686  0000000140001000  0000000140001000  00000400  2**4\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  1 .rdata        00000e8c  0000000140003000  0000000140003000  00001c00  2**4\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  2 .data         000001d0  0000000140004000  0000000140004000  00002c00  2**4\n                  CONTENTS, ALLOC, LOAD, DATA\n  3 .pdata        000000d8  0000000140005000  0000000140005000  00002e00  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  4 .%b2          009a2afe  0000000140006000  0000000140006000  00003000  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  5 .8LR          00000828  00000001409a9000  00000001409a9000  009a5c00  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  6 .29u          00808e10  00000001409aa000  00000001409aa000  009a6600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE, DATA\n  7 .reloc        00000368  00000001411b3000  00000001411b3000  011af600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n"
+  stderr: "objdump: /home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe: warning: ignoring section flag IMAGE_SCN_MEM_NOT_PAGED in section .29u\n"
+  exit_code: 0
+  signal: null
+  output_budget_bytes: 16777216
+  output_budget_source: default
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: e21ffe3a78500cb6bb8bfffa334dcebae8ae4ae8d513ce15ea605baac8e5264f
+  artifact_changed: false
+normalized_result:
+  stdout: "\n/home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe:     file format pei-x86-64\n\nSections:\nIdx Name          Size      VMA               LMA               File off  Algn\n  0 .text         00001686  0000000140001000  0000000140001000  00000400  2**4\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  1 .rdata        00000e8c  0000000140003000  0000000140003000  00001c00  2**4\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  2 .data         000001d0  0000000140004000  0000000140004000  00002c00  2**4\n                  CONTENTS, ALLOC, LOAD, DATA\n  3 .pdata        000000d8  0000000140005000  0000000140005000  00002e00  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n  4 .%b2          009a2afe  0000000140006000  0000000140006000  00003000  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE\n  5 .8LR          00000828  00000001409a9000  00000001409a9000  009a5c00  2**2\n                  CONTENTS, ALLOC, LOAD, DATA\n  6 .29u          00808e10  00000001409aa000  00000001409aa000  009a6600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, CODE, DATA\n  7 .reloc        00000368  00000001411b3000  00000001411b3000  011af600  2**2\n                  CONTENTS, ALLOC, LOAD, READONLY, DATA\n"
+  stderr: "objdump: /home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe: warning: ignoring section flag IMAGE_SCN_MEM_NOT_PAGED in section .29u\n"
+  exit_code: 0
+  signal: null
+  output_budget_bytes: 16777216
+  output_budget_source: default
+  output_truncated: false
+  completion_status: complete
+  artifact_sha256_after: e21ffe3a78500cb6bb8bfffa334dcebae8ae4ae8d513ce15ea605baac8e5264f
+  artifact_changed: false
+confidence: observed
+authority: shipped-artifact
+environment: null
+limitations[3]: "The executable implementation, version and supported formats are unknown because no reliable identity probe was performed.",A non-zero process exit is preserved as an observed command result.,"When both are available, pre-run and post-run digests detect artifact changes across the provider call but cannot prove the exact bytes consumed during the call."
+relationship_coverage: null
+locations[1]{kind,path}:
+  artifact-path,/home/z/my-project/work/v312/test/yamali/hepsi-max/cikti.exe
+evidence_links: []

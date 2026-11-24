@@ -1,0 +1,3913 @@
+{
+ "tag": "taban",
+ "motor": "/home/z/my-project/work/v312/build_base/bin/VMProtectCon",
+ "zaman": "2026-11-24 12:04:17",
+ "referans": {
+  "wine_rc": 0,
+  "satir": 94,
+  "md5": "b488d715648e53f47ab02b22eb2df335"
+ },
+ "sonuclar": [
+  {
+   "ad": "fn0-none",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 13312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": []
+   },
+   "pe": {
+    "boyut": 13312,
+    "sha256": "337d09c3ff1f95b3d39d9b482f34fd680db85d09e85ee2fa918bf1abd0a52b7a",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 216,
+      "ham_boy": 512,
+      "entropy": 1.796
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-mutation",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 13824,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Mutation",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 13824,
+    "sha256": "54bcc69e3386bd523ed1babbf1ef7099547c8bff0aabd91a02f220c78ae6edf7",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 612,
+      "ham_boy": 1024,
+      "entropy": 3.779
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-ultra",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 595968,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 595968,
+    "sha256": "6dbfe3c3754a591fdc05715bc0632dc462d288388222ae8cc4c8e70e8fa7ef39",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 582728,
+      "ham_boy": 583168,
+      "entropy": 6.544
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn6-virt",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 696320,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 696320,
+    "sha256": "4bbe29d96d92c8e9c154e836ec43f2d186965c724193c57a95882528e1273e45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 683036,
+      "ham_boy": 683520,
+      "entropy": 6.617
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn6-mutation",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 16384,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Mutation",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Mutation",
+      "complexity": null
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Mutation",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Mutation",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Mutation",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Mutation",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 16384,
+    "sha256": "3e12e88a99f4ea8068754c48efd7f1c14ebfdedea2ed32e9e7fe5a16a7cd41ac",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 3176,
+      "ham_boy": 3584,
+      "entropy": 5.478
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn6-ultra",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 738304,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Ultra",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Ultra",
+      "complexity": null
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Ultra",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Ultra",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Ultra",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 738304,
+    "sha256": "9009dba6c74e23d0d7a96f0dd1b645bb745e17221486aaa5d4c4e4cd3774e144",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 725340,
+      "ham_boy": 725504,
+      "entropy": 6.65
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-c0",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 0,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-c25",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 25,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-c50",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 50,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-c75",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 75,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-c100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 100,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-mutation-c0",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 13824,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 0,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Mutation",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 13824,
+    "sha256": "54bcc69e3386bd523ed1babbf1ef7099547c8bff0aabd91a02f220c78ae6edf7",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 612,
+      "ham_boy": 1024,
+      "entropy": 3.779
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-ultra-c0",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 595968,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 0,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 595968,
+    "sha256": "6dbfe3c3754a591fdc05715bc0632dc462d288388222ae8cc4c8e70e8fa7ef39",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 582728,
+      "ham_boy": 583168,
+      "entropy": 6.544
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-fc0",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": 0
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-mutation-c50",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 13824,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 50,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Mutation",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 13824,
+    "sha256": "54bcc69e3386bd523ed1babbf1ef7099547c8bff0aabd91a02f220c78ae6edf7",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 612,
+      "ham_boy": 1024,
+      "entropy": 3.779
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-ultra-c50",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 595968,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 50,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 595968,
+    "sha256": "6dbfe3c3754a591fdc05715bc0632dc462d288388222ae8cc4c8e70e8fa7ef39",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 582728,
+      "ham_boy": 583168,
+      "entropy": 6.544
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-fc50",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": 50
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-mutation-c100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 0.1,
+    "cikti_boyutu": 13824,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 100,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Mutation",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 13824,
+    "sha256": "54bcc69e3386bd523ed1babbf1ef7099547c8bff0aabd91a02f220c78ae6edf7",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 612,
+      "ham_boy": 1024,
+      "entropy": 3.779
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-ultra-c100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 595968,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 100,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 595968,
+    "sha256": "6dbfe3c3754a591fdc05715bc0632dc462d288388222ae8cc4c8e70e8fa7ef39",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 582728,
+      "ham_boy": 583168,
+      "entropy": 6.544
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-fc100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": 100
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-i1",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMInstances": 1,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-i2",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMInstances": 2,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-i5",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMInstances": 5,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-i10",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMInstances": 10,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-vm2x",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMVersion": 1,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-vm2x-c100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.2,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMVersion": 1,
+    "VMComplexity": 100,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-mask-nokta3soru",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".???",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "a1716c4092712a496c5229de59e56fa878bd90dc46b58d51a55162aa0d283d41",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".???0",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".???0",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-mask-vmpsoru",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": "vmp?",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "d985632bf27be151aaa2c485eb289d627d6f76b86a49d2e77dc5ed59f0f3844e",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": "vmp?0",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     "vmp?0",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-seed12345",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "RandomSeed": 12345,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-seed12345-tekrar",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "RandomSeed": 12345,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-seed777",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "RandomSeed": 777,
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-tekrar",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.0,
+    "cikti_boyutu": 589312,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 589312,
+    "sha256": "65451a90a4b56697f7a92a10328534686167f01fec7316504f5c6db22037fc45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 576088,
+      "ham_boy": 576512,
+      "entropy": 6.533
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn6-virt-c100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 696320,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [],
+    "VMComplexity": 100,
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Virtualization",
+      "complexity": null
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 696320,
+    "sha256": "4bbe29d96d92c8e9c154e836ec43f2d186965c724193c57a95882528e1273e45",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 683036,
+      "ham_boy": 683520,
+      "entropy": 6.617
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.4,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn6-ultra-fc100",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 1.1,
+    "cikti_boyutu": 738304,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".???",
+    "secenekler": [],
+    "VMInstances": 10,
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Ultra",
+      "complexity": 100
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 738304,
+    "sha256": "8ceec34fac403a75c1a033729d93216507359324e8fd3cf0605274721dbb825f",
+    "upx": false,
+    "giris_bolumu": ".text",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".???0",
+      "vboy": 725340,
+      "ham_boy": 725504,
+      "entropy": 6.65
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".???0",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 9
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 15
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 2
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 5
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 0,
+    "sure_sn": 1.5,
+    "eslesti": true,
+    "satir": 94,
+    "fark": null
+   }
+  },
+  {
+   "ad": "fn1-virt-tespit",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 2.1,
+    "cikti_boyutu": 5260288,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".vmp0",
+    "secenekler": [
+     "MemoryProtection",
+     "ImportProtection",
+     "StripDebugInfo"
+    ],
+    "fonksiyonlar": [
+     {
+      "adres": "0x1400014c0",
+      "tip": "Virtualization",
+      "complexity": null
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 5260288,
+    "sha256": "d1ff5d43ac641b953e377bb3196ab57ca20f2b41c31847ce39e3119b79e4fb0f",
+    "upx": false,
+    "giris_bolumu": ".vmp02",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".vmp00",
+      "vboy": 2848451,
+      "ham_boy": 2848768,
+      "entropy": 6.978
+     },
+     {
+      "ad": ".vmp01",
+      "vboy": 2088,
+      "ham_boy": 2560,
+      "entropy": 0.319
+     },
+     {
+      "ad": ".vmp02",
+      "vboy": 2395644,
+      "ham_boy": 2395648,
+      "entropy": 6.948
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".vmp00",
+     ".vmp01",
+     ".vmp02",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "USER32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 11
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 53,
+    "sure_sn": 1.4,
+    "eslesti": false,
+    "satir": 0,
+    "fark": {
+     "satir": 1,
+     "beklenen": "=== MiniPac (CPlusPort test oyunu) ===",
+     "bulunan": ""
+    }
+   }
+  },
+  {
+   "ad": "hepsi-max",
+   "motor": {
+    "rc": 0,
+    "sure_sn": 2.3,
+    "cikti_boyutu": 5620736,
+    "log_son": "Compilation completed"
+   },
+   "proje": {
+    "bolum_adi": ".???",
+    "secenekler": [
+     "MemoryProtection",
+     "ImportProtection",
+     "StripDebugInfo"
+    ],
+    "VMComplexity": 100,
+    "VMInstances": 10,
+    "RandomSeed": 20261124,
+    "fonksiyonlar": [
+     {
+      "adres": "0x140001020",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001470",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x1400014c0",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001560",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001630",
+      "tip": "Ultra",
+      "complexity": 100
+     },
+     {
+      "adres": "0x140001680",
+      "tip": "Ultra",
+      "complexity": 100
+     }
+    ]
+   },
+   "pe": {
+    "boyut": 5620736,
+    "sha256": "5e638fb4db4963dcf1f4b5336a0a5178aa01c927d86f84750e554f1137408bf4",
+    "upx": false,
+    "giris_bolumu": ".???2",
+    "dll_ozellikleri": [
+     "HighEntropyVA",
+     "DynamicBase",
+     "NXCompat",
+     "TerminalServerAware"
+    ],
+    "art_veri": 0,
+    "koruyucu_bolumler": [
+     {
+      "ad": ".???0",
+      "vboy": 3190780,
+      "ham_boy": 3190784,
+      "entropy": 6.962
+     },
+     {
+      "ad": ".???1",
+      "vboy": 2088,
+      "ham_boy": 2560,
+      "entropy": 0.32
+     },
+     {
+      "ad": ".???2",
+      "vboy": 2413920,
+      "ham_boy": 2414080,
+      "entropy": 6.933
+     }
+    ],
+    "bolum_adlari": [
+     ".text",
+     ".rdata",
+     ".data",
+     ".pdata",
+     ".???0",
+     ".???1",
+     ".???2",
+     ".reloc"
+    ],
+    "importlar": [
+     {
+      "dll": "api-ms-win-crt-stdio-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-runtime-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-locale-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-heap-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-private-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-string-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-math-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "api-ms-win-crt-environment-l1-1-0.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "USER32.dll",
+      "sayi": 1
+     },
+     {
+      "dll": "KERNEL32.dll",
+      "sayi": 11
+     }
+    ],
+    "tls": null,
+    "yukleme_ayar": {
+     "boyut": 312,
+     "guard_bayraklari": "0x100"
+    }
+   },
+   "wine": {
+    "rc": 53,
+    "sure_sn": 1.4,
+    "eslesti": false,
+    "satir": 0,
+    "fark": {
+     "satir": 1,
+     "beklenen": "=== MiniPac (CPlusPort test oyunu) ===",
+     "bulunan": ""
+    }
+   }
+  }
+ ]
+}

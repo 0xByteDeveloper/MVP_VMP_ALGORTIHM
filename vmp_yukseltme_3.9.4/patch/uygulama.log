@@ -1,0 +1,2 @@
+yama noktası: 21  değişen dosya: ['core/core.cc', 'core/core.h', 'core/dotnetfile.cc', 'core/elffile.cc', 'core/files.cc', 'core/files.h', 'core/intel.cc', 'core/macfile.cc', 'core/pefile.cc']
+yazıldı: /home/z/my-project/work/v312/out/patch/10_yukseltme_3.9.4.diff (17386 bayt)  +/− satır: 118/26
